@@ -20,14 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'sdmallick98@gmail.coms';         // Your Gmail
+            $mail->Username   = 'sdmallick98@gmail.com';         // Your Gmail
             $mail->Password   = 'icsj aipo jtpm fzdo';            // App password (not your Gmail password)
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
             // Email content
             $mail->setFrom($email, $name);
-            $mail->addAddress('your_email@gmail.com');          // Where you want to receive it
+            $mail->addAddress('sdmallick98@gmail.com');          // Where you want to receive it
 
             $mail->Subject = 'New Contact Form Submission';
             $mail->Body    = "Name: $name\nEmail: $email\nMessage:\n$message";
